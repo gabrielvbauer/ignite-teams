@@ -8,6 +8,7 @@ import {
 import theme from "./src/theme"
 
 import { Groups } from "@screens/Groups"
+import { Loading } from "@components/Loading"
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -15,13 +16,9 @@ export default function App() {
     Roboto_700Bold,
   })
 
-  if (!fontsLoaded) {
-    return null
-  }
-
   return (
     <ThemeProvider theme={theme}>
-      <Groups />
+      {fontsLoaded ? <Groups /> : <Loading />}
     </ThemeProvider>
   )
 }
