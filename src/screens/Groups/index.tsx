@@ -6,7 +6,7 @@ import { Header } from "@components/Header"
 export function Groups() {
   return (
     <Container>
-      <Header showBackButton />
+      <Header />
       <Highlight title="Turmas" subtitle="Jogue com a sua turma" />
     </Container>
   )
