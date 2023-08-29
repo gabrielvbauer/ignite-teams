@@ -31,7 +31,9 @@ export function Groups() {
         )}
       />
 
-      <Button title='Cadastrar nova turma' />
+      <Button
+        title='Cadastrar nova turma'
+      />
     </Container>
   )
 }
