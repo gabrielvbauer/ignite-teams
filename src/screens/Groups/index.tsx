@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigation } from '@react-navigation/native'
 
 import { Highlight } from '@components/Highlight'
 import { Container } from './styles'
@@ -11,6 +12,11 @@ import { Button } from '@components/Button'
 
 export function Groups() {
   const [groups, setGroups] = useState<string[]>([])
+  const navigation = useNavigation()
+
+  function handleNewGroup() {
+    navigation.navigate('new')
+  }
 
   return (
     <Container>
@@ -33,6 +39,7 @@ export function Groups() {
 
       <Button
         title='Cadastrar nova turma'
+        onPress={handleNewGroup}
       />
     </Container>
   )
